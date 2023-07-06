@@ -1,0 +1,97 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "directory",
+    "dateExported": "2023-07-06T12:11:43.290Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "college",
+            "containerId": "",
+            "created": "2023-07-06T08:30:38.364Z",
+            "sortNum": 10000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7b772198-52de-412d-8add-bd8433237374",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "get all the colleges",
+            "url": "http://localhost:4080/api/colleges",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-06T08:26:37.514Z",
+            "modified": "2023-07-06T10:48:14.470Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "e88a96a3-e399-4684-ac9d-aa1190adac19",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "post college",
+            "url": "http://localhost:4080/api/college/new",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-06T08:31:08.431Z",
+            "modified": "2023-07-06T11:34:00.962Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 150000,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": \"https://example.com/college_img_djsce.jpg\"\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  }\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4bfb5722-187d-4e76-9edd-5be9de8260f8",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "update college",
+            "url": "http://localhost:4080/api/college/64a6a6a86eace1f306f92003",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-06T08:31:54.773Z",
+            "modified": "2023-07-06T12:01:49.975Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 150000,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": \"https://example.com/college_img_djsce.jpg\"\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  },\n  \"rating\": 0,\n  \"number_of_reviews\":0\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3378e4c5-df04-4690-b921-f6d5aa80b540",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "delete college",
+            "url": "http://localhost:4080/api/college/64a6a6a86eace1f306f92003",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-06T08:32:09.506Z",
+            "modified": "2023-07-06T12:03:53.173Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "18807984-03bb-4e32-ade1-9b14bfd1f004",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "get college by id",
+            "url": "http://localhost:4080/api/college/64a6a546a40cd3ed0b559f12",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-06T08:32:22.918Z",
+            "modified": "2023-07-06T12:06:35.843Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
