@@ -14,5 +14,9 @@ const schools=require('./routes/schoolRoutes')
 app.use("/api/",schools)
 
 
+// home
+const allData=require('./routes/allDataRoutes')
+app.use("/api/",allData)
+
 
 module.exports=app;
