@@ -49,7 +49,7 @@ const collegesSchema = mongoose.Schema({
                 required: true,
             },
             url: {
-                type: String,
+                type: [String],
             },
         },
         logo_img: {
@@ -73,16 +73,13 @@ const collegesSchema = mongoose.Schema({
     reviews: {
         name: {
             type: String,
-            // required: true,
         },
         rating: {
             type: Number,
-            // required: true,
 
         },
         comment: {
-            type: String,
-            // required: [true, "Please enter a comment"],
+            type: [String],
         },
     },
     createdAT:{

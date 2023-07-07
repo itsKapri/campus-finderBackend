@@ -1,6 +1,4 @@
 const collegesSchema = require('../models/collegesModels');
-
-
 exports.getAllColleges = async (req, res) => {
     try {
         const collegeList = await collegesSchema.find();

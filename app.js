@@ -9,5 +9,10 @@ const colleges=require('./routes/collegesRoutes')
 app.use("/api/",colleges)
 
 
+// school routes
+const schools=require('./routes/schoolRoutes')
+app.use("/api/",schools)
+
+
 
 module.exports=app;
