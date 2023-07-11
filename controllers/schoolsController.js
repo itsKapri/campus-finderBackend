@@ -1,8 +1,12 @@
 const schoolsSchema=require('../models/schoolModels');
+const ErrorHandler = require('../utils/ErrorHandler');
 
-exports.getAllSchools = async (req, res) => {
+exports.getAllSchools = async (req, res,next) => {
   try {
     const schoolList = await schoolsSchema.find();
+    if(!schoolList){
+      return next(new ErrorHandler("school is not found",404))
+    }
     console.log(schoolList.length);
     res.status(200).json({
       success: true,
@@ -17,9 +21,12 @@ exports.getAllSchools = async (req, res) => {
   }
 };
 
-exports.createSchoolList = async (req, res) => {
+exports.createSchoolList = async (req, res,next) => {
   try {
     const newSchool = await schoolsSchema.create(req.body);
+    if(!newSchool){
+      return next(new ErrorHandler("school is not found",404))
+    }
     res.status(201).json({
       success: true,
       newSchool,
@@ -33,7 +40,7 @@ exports.createSchoolList = async (req, res) => {
   }
 };
 
-exports.updateSchoolList = async (req, res) => {
+exports.updateSchoolList = async (req, res,next) => {
   try {
     const updatedSchool = await schoolsSchema.findByIdAndUpdate(
       req.params.id,
@@ -45,10 +52,7 @@ exports.updateSchoolList = async (req, res) => {
       }
     );
     if (!updatedSchool) {
-      return res.status(404).json({
-        success: false,
-        message: 'School not found',
-      });
+      return next(new ErrorHandler("school is not found",404))
     }
     res.status(200).json({
       success: true,
@@ -63,14 +67,11 @@ exports.updateSchoolList = async (req, res) => {
   }
 };
 
-exports.deleteSchoolList = async (req, res) => {
+exports.deleteSchoolList = async (req, res,next) => {
   try {
     const deletedSchool = await schoolsSchema.findByIdAndDelete(req.params.id);
     if (!deletedSchool) {
-      return res.status(404).json({
-        success: false,
-        message: 'School not found',
-      });
+      return next(new ErrorHandler("school is not found",404))
     }
     res.status(200).json({
       success: true,
@@ -85,14 +86,11 @@ exports.deleteSchoolList = async (req, res) => {
   }
 };
 
-exports.getSchoolById = async (req, res) => {
+exports.getSchoolById = async (req, res,next) => {
   try {
     const school = await schoolsSchema.findById(req.params.id);
     if (!school) {
-      return res.status(404).json({
-        success: false,
-        message: 'School not found',
-      });
+      return next(new ErrorHandler("school is not found",404))
     }
     res.status(200).json({
       success: true,
