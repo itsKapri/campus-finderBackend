@@ -1,8 +1,12 @@
 const collegesSchema = require('../models/collegesModels');
-exports.getAllColleges = async (req, res) => {
+const ErrorHandler = require('../utils/ErrorHandler');
+exports.getAllColleges = async (req, res,next) => {
     try {
         const collegeList = await collegesSchema.find();
-        console.log(collegeList.length);
+        if (!collegeList) {
+          return next(new ErrorHandler("collegeList is not found",404))
+      }
+      console.log(collegeList.length);
         res.status(200).json({
             success: true,
             collegeList,
@@ -86,14 +90,11 @@ exports.deleteCollegeList = async (req, res) => {
 };
 
 
-exports.getbyidCollegeList = async (req, res) => {
+exports.getbyidCollegeList = async (req, res,next) => {
   try {
     const college = await collegesSchema.findById(req.params.id);
     if (!college) {
-      return res.status(404).json({
-        success: false,
-        message: 'College not found',
-      });
+      return next(new ErrorHandler("college is not found",404))
     }
     res.status(200).json({
       success: true,
