@@ -19,6 +19,11 @@ app.use("/api/",schools)
 const allData=require('./routes/allDataRoutes')
 app.use("/api/",allData)
 
+
+// Auth
+const users=require('./routes/userRoutes')
+app.use("/api",users)
+
 // error middleware
 app.use(errorMiddleware)
 
