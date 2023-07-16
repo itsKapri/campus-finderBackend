@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 const errorMiddleware=require('./middleware/error')
-
+const authMiddleware = require('./middleware/auth');
 app.use(express.json())
 
 // colleges routes 
@@ -23,6 +23,7 @@ app.use("/api/",allData)
 // Auth
 const users=require('./routes/userRoutes')
 app.use("/api",users)
+app.use(authMiddleware)
 
 // error middleware
 app.use(errorMiddleware)

@@ -82,26 +82,40 @@ const schoolsSchema = mongoose.Schema({
         type: [String],
         enum: ["public", "private", "hybrid"],
     },
-    rating: {
+    ratings: {
         type: Number,
         default: 0,
     },
     number_of_reviews: {
-        type: Number,
+        type: Number,       
         default: 0,
     },
-    reviews: {
-        name: {
+    reviews: [
+        {
+          user: {
+            type: mongoose.Schema.ObjectId,
+            ref: "User",
+            required: true,
+          },
+          name: {
             type: String,
-        },
-        rating: {
+            required: true,
+          },
+          rating: {
             type: Number,
-
+            required: true,
+          },
+          comment: {
+            type: String,
+            required: true,
+          },
         },
-        comment: {
-            type: [String],
-        },
-    },
+      ],
+      user: {
+        type: mongoose.Schema.ObjectId,
+        ref: "User",
+        required: true,
+      },
     createdAT: {
         type: Date,
         default: Date.now

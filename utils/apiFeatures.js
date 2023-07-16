@@ -1,25 +1,3 @@
-// class ApiFeatures {
-//     constructor(query, queryStr) {
-//         this.query = query;
-//         this.queryStr = queryStr;
-//     }
-
-//     search() {
-//         if (this.queryStr.keyword) {
-//             const keyword = {
-//                 name: {
-//                     $regex: this.queryStr.keyword,
-//                     $options: "i",
-//                 },
-//             };
-//             console.log(keyword);
-//             this.query = this.query.find(keyword);
-//         }
-//         return this;
-//     }
-// }
-// module.exports = ApiFeatures;
-
 const search = (query, queryStr) => {
     if (queryStr.keyword) {
       const keyword = {
@@ -32,7 +10,7 @@ const search = (query, queryStr) => {
     }
     return query;
   };
-  
+  // need to modify
   const filter = (query, queryStr) => {
     if (queryStr.minFees) {
         query = query.where("fees").gte(parseInt(queryStr.minFees));

@@ -62,7 +62,7 @@ const collegesSchema = mongoose.Schema({
             },
         },
     },
-    rating: {
+    ratings: {
         type: Number,
         default: 0,
     },
@@ -70,18 +70,27 @@ const collegesSchema = mongoose.Schema({
         type: Number,
         default: 0,
     },
-    reviews: {
-        name: {
+    reviews: [
+        {
+          user: {
+            type: mongoose.Schema.ObjectId,
+            ref: "User",
+            required: true,
+          },
+          name: {
             type: String,
-        },
-        rating: {
+            required: true,
+          },
+          rating: {
             type: Number,
-
+            required: true,
+          },
+          comment: {
+            type: String,
+            required: true,
+          },
         },
-        comment: {
-            type: [String],
-        },
-    },
+      ],
     createdAT:{
         type:Date,
         default:Date.now
