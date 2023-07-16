@@ -10,10 +10,6 @@ const schoolsSchema = mongoose.Schema({
             type: String,
             required: [true, "Please enter the city"],
         },
-        sub_city: {
-            type: String,
-            required: [true, "Please enter the sub city"],
-        },
         pincode: {
             type: Number,
             required: [true, "Please enter the pincode"],
@@ -93,7 +89,7 @@ const schoolsSchema = mongoose.Schema({
     reviews: [
         {
           user: {
-            type: mongoose.Schema.ObjectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "User",
             required: true,
           },
@@ -111,11 +107,6 @@ const schoolsSchema = mongoose.Schema({
           },
         },
       ],
-      user: {
-        type: mongoose.Schema.ObjectId,
-        ref: "User",
-        required: true,
-      },
     createdAT: {
         type: Date,
         default: Date.now

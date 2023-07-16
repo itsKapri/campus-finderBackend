@@ -1,5 +1,6 @@
 const schoolsSchema = require('../models/schoolModels');
 const ErrorHandler = require('../utils/ErrorHandler');
+const mongoose =require("mongoose")
 exports.getAllSchools = async (req, res, next) => {
   try {
     const schoolList = await schoolsSchema.find();
@@ -108,20 +109,19 @@ exports.getSchoolById = async (req, res, next) => {
 exports.createSchoolReview = 
   async (req, res) => {
     try {
-      const { rating, comment, schoolsId } = req.body;
-
+      
+      const { rating, comment, schools_Id } = req.body;
       // Validate schoolsId format
-      if (!mongoose.isValidObjectId(schoolsId)) {
+      if (!mongoose.isValidObjectId(schools_Id)) {
         return res.status(400).json({ success: false, message: 'Invalid schoolsId' });
       }
-
       const review = {
         user: req.user._id,
         name: req.user.name,
         rating: Number(rating),
         comment,
       };
-      const school = await schoolsSchema.findById(schoolsId); 
+      const school = await schoolsSchema.findById(schools_Id); 
 
       const isReviewed = school.reviews.find(
         (rev) => rev.user.toString() === req.user._id.toString()
@@ -163,15 +163,25 @@ exports.createSchoolReview =
 // Get All Reviews of a school
 exports.getschoolReviews = async (req, res, next) => {
   try {
-    const school = await schoolsSchema.findById(req.query.id);
-
-    if (!school) {
-      return next(new ErrorHandler('School not found', 404)); 
+    const schools = await schoolsSchema.find();
+    if (!schools) {
+      return next(new ErrorHandler('Schools not found', 404)); 
     }
+
+    const reviewsAndRatings = schools.reduce((acc, school) => {
+      if (school.reviews && school.reviews.length > 0) {
+        acc.push({
+          schoolId: school._id,
+          reviews: school.reviews,
+          ratings: school.ratings || 0,
+        });
+      }
+      return acc;
+    }, []);
 
     res.status(200).json({
       success: true,
-      reviews: school.reviews,
+      reviewsAndRatings: reviewsAndRatings,
     });
   } catch (error) {
     console.error(error);
@@ -181,3 +191,47 @@ exports.getschoolReviews = async (req, res, next) => {
     });
   }
 };
+
+
+
+// Delete Review by Review ID
+exports.deleteSchoolReview = async (req, res) => {
+  try {
+    const { schoolId, reviewId } = req.params;
+    if (!mongoose.isValidObjectId(reviewId)) {
+      return res.status(400).json({ success: false, message: 'Invalid schoolId or reviewId' });
+    }
+    const school = await schoolsSchema.findById(schoolId);
+    if (!school) {
+      return res.status(404).json({ success: false, message: 'School not found' });
+    }
+    const reviewIndex = school.reviews.findIndex((rev) => rev._id.toString() === reviewId);
+    if (reviewIndex === -1) {
+      return res.status(404).json({ success: false, message: 'Review not found' });
+    }
+    const review = school.reviews[reviewIndex];
+    // Check if the review is associated with the current user
+    if (review.user.toString() !== req.user._id.toString()) {
+      return res.status(403).json({ success: false, message: 'You are not authorized to delete this review' });
+    }
+    const test=school.reviews.splice(reviewIndex, 1);
+    console.log(test);
+    let avg = 0;
+    school.reviews.forEach((rev) => {
+      avg += rev.rating;
+    });
+    school.ratings = school.reviews.length > 0 ? avg / school.reviews.length : 0;
+    await school.save({ validateBeforeSave: false });
+    res.status(200).json({
+      success: true,
+      message: 'Review deleted successfully',
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({
+      success: false,
+      message: 'Server Error',
+    });
+  }
+};
+
