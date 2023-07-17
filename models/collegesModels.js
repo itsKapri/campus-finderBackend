@@ -12,11 +12,7 @@ const collegesSchema = mongoose.Schema({
         city: {
             type: String,
             required: [true, "Please enter the city"],
-        },
-        state: {
-            type: String,
-            required: [true, "Please enter the state"],
-        },
+        }
     },
     website: {
         type: String,
@@ -42,10 +38,7 @@ const collegesSchema = mongoose.Schema({
             type:Number,
         }
     },
-    Salary:{
-        type:Number
-    },
-    placement_package: {
+    package: {
         type: Number,
         required: [true, "Please enter the placement package details"],
     },
@@ -61,7 +54,7 @@ const collegesSchema = mongoose.Schema({
     },
     Owenrship:{
         type: String,
-        enum: ["public", "private", "hybrid"],
+        enum: ["public", "private"],
     },
     Address:{
         type:String
@@ -74,10 +67,6 @@ const collegesSchema = mongoose.Schema({
         type:String
     },
     ratings: {
-        type: Number,
-        default: 0,
-    },
-    number_of_reviews: {
         type: Number,
         default: 0,
     },
