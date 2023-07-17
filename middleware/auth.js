@@ -3,8 +3,8 @@ const userSchema = require('../models/usersModel');
 const ErrorHandler = require('../utils/ErrorHandler');
 
 const authMiddleware = async (req, res, next) => {
-  // const token = req.cookies.token;
-  const token=req.header("token")
+  const token = req.cookies.token;  
+  // const token=req.header("token")
   console.log(token);
 
   if (!token) {

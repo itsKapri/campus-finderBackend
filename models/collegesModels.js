@@ -22,7 +22,7 @@ const collegesSchema = mongoose.Schema({
         type: String,
         required: [true, "Please enter the website URL"],
     },
-    courses: {
+    Specializations: {
         type: [String],
         required: [true, "Please enter the courses offered"],
     },
@@ -35,8 +35,15 @@ const collegesSchema = mongoose.Schema({
         required: [true, "Please enter the college ranking"],
     },
     fees: {
-        type: Number,
-        required: [true, "Please enter the college fees"],
+        BE:{
+            type:Number,
+        },
+        MCA:{
+            type:Number,
+        }
+    },
+    Salary:{
+        type:Number
     },
     placement_package: {
         type: Number,
@@ -44,23 +51,27 @@ const collegesSchema = mongoose.Schema({
     },
     images: {
         college_img: {
-            public_id: {
-                type: String,
-                required: true,
-            },
-            url: {
                 type: [String],
-            },
+                required: true,
         },
         logo_img: {
-            public_id: {
-                type: String,
-                required: true,
-            },
-            url: {
-                type: String,
-            },
+            type: String,
+            required: true,
         },
+    },
+    Owenrship:{
+        type: String,
+        enum: ["public", "private", "hybrid"],
+    },
+    Address:{
+        type:String
+    },
+    Phone:{
+        type:Number,
+        required:true
+    },
+    email:{
+        type:String
     },
     ratings: {
         type: Number,

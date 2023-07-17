@@ -2,10 +2,11 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 app.use(cors())
+const cookieParser = require('cookie-parser');
 const errorMiddleware=require('./middleware/error')
 const authMiddleware = require('./middleware/auth');
 app.use(express.json())
-
+app.use(cookieParser());
 // colleges routes 
 const colleges=require('./routes/collegesRoutes')
 app.use("/api/",colleges)
