@@ -1,6 +1,7 @@
 const app=require('./app')
 require('dotenv').config()
-
+const cors = require('cors')
+app.use(cors())
 
 // mongodb connection
 const connectDB=require('./config/dbconnection')

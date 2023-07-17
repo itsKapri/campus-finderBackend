@@ -1,0 +1,451 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "campus-finder/api",
+    "dateExported": "2023-07-17T11:24:15.315Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "college",
+            "containerId": "",
+            "created": "2023-07-06T08:30:38.364Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "School",
+            "containerId": "",
+            "created": "2023-07-07T06:27:22.781Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "user",
+            "containerId": "",
+            "created": "2023-07-07T06:27:34.480Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "f14cdebf-6f5f-4d4d-8638-2d1f5bf8fedd",
+            "name": "home",
+            "containerId": "",
+            "created": "2023-07-07T13:50:47.264Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7b772198-52de-412d-8add-bd8433237374",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "get all the colleges",
+            "url": "http://localhost:4080/api/colleges",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-07-06T08:26:37.514Z",
+            "modified": "2023-07-13T11:05:36.459Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "keyword",
+                    "value": "bombay",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "minFees",
+                    "value": "10",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "maxFees",
+                    "value": "140000",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "e88a96a3-e399-4684-ac9d-aa1190adac19",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "post college",
+            "url": "http://localhost:4080/api/college/new",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-06T08:31:08.431Z",
+            "modified": "2023-07-16T19:43:31.204Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"testxyz_1234\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 150000,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": \"https://example.com/college_img_djsce.jpg\"\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  }\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4bfb5722-187d-4e76-9edd-5be9de8260f8",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "update college",
+            "url": "http://localhost:4080/api/college/64a6adb3ba147067139835f5",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-07-06T08:31:54.773Z",
+            "modified": "2023-07-08T05:31:57.729Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 100,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": [\"https://example.com/college_img_djsce.jpg\",\"https://example.com/college_img_djsce.jpg\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  },\n  \"rating\": 0,\n  \"number_of_reviews\":0\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "adf1f087-cff1-40eb-a3a6-43a92041df39",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "get schools",
+            "url": "http://localhost:4080/api/school",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-07-07T12:42:30.674Z",
+            "modified": "2023-07-11T10:56:07.675Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3378e4c5-df04-4690-b921-f6d5aa80b540",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "delete college",
+            "url": "http://localhost:4080/api/college/64a6a6a86eace1f306f92003",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-07-06T08:32:09.506Z",
+            "modified": "2023-07-06T12:03:53.173Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "18807984-03bb-4e32-ade1-9b14bfd1f004",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "get college by id",
+            "url": "http://localhost:4080/api/college/64b44687714ba67a56589afc",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-06T08:32:22.918Z",
+            "modified": "2023-07-16T19:43:14.047Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a58ac5f3-0d95-4cd7-a959-932242c9ad70",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "create school list (admin)",
+            "url": "http://localhost:4080/api/school/new",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2023-07-07T06:28:13.827Z",
+            "modified": "2023-07-16T12:45:26.488Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"xyz\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"sub_city\": \"Nalasopara East\",\n    \"pincode\": 123456,\n    \"state\": \"Maharashtra\"\n  },\n  \"images\": {\n    \"school_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": [\"image_url_1\", \"image_url_2\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": \"logo_image_url\"\n    }\n  },\n  \"type_Of_board\": [\"example_board_type_1\", \"example_board_type_2\"],\n  \"description\": \"Example description of the school\",\n  \"documents_required_for_admission\": \"Example documents required for admission\",\n  \"contact_information\": {\n    \"school_email\": \"school@example.com\",\n    \"school_contact\": [1234567890, 9876543210]\n  },\n  \"fees\": 10000,\n  \"admission_coordinator_information\": {\n    \"coordinator_email\": \"coordinator@example.com\",\n    \"coordinator_contact\": [1111111111, 2222222222]\n  },\n  \"type_Of_school\": [\"private\"]\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7c00381f-8a77-477e-906a-705937fd8e4f",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "update school list (admin)",
+            "url": "http://localhost:4080/api/school/64a810abb99e1da6ad75ad82",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-07-07T06:29:01.655Z",
+            "modified": "2023-07-07T13:23:01.118Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Divine Providence High School\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"sub_city\": \"Nalasopara East\",\n    \"pincode\": 123456,\n    \"state\": \"Maharashtra\"\n  },\n  \"images\": {\n    \"school_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": [\"image_url_1\", \"image_url_2\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": \"logo_image_url\"\n    }\n  },\n  \"type_Of_board\": [\"example_board_type_1\", \"example_board_type_2\"],\n  \"description\": \"Example description of the school\",\n  \"documents_required_for_admission\": \"Example documents required for admission\",\n  \"contact_information\": {\n    \"school_email\": \"school@example.com\",\n    \"school_contact\": [1234567890, 9876543210]\n  },\n  \"fees\": 10000152163,\n  \"admission_coordinator_information\": {\n    \"coordinator_email\": \"coordinator@example.com\",\n    \"coordinator_contact\": [1111111111, 2222222222]\n  },\n  \"type_Of_school\": [\"private\",\"public\"]\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "21032a1f-be34-4c20-8cc1-c8d4111f4d1d",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "delete schoolList (admin)",
+            "url": "http://localhost:4080/api/school/64a810abb99e1da6ad75ad82",
+            "method": "DELETE",
+            "sortNum": 80000,
+            "created": "2023-07-07T06:29:42.383Z",
+            "modified": "2023-07-16T13:54:29.233Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3ba32e75-142b-483a-93b2-d630b6c87fb2",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "f14cdebf-6f5f-4d4d-8638-2d1f5bf8fedd",
+            "name": "all data",
+            "url": "http://localhost:4080/api/home",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2023-07-07T13:51:22.158Z",
+            "modified": "2023-07-07T13:51:37.210Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "8cdb2204-8d3c-4f50-b52c-0479f2494b4f",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "get by id",
+            "url": "http://localhost:4080/api/school/64b3e6662de261de7f0fd756",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-07-11T10:49:05.739Z",
+            "modified": "2023-07-16T13:17:46.140Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "94468416-a7f7-4ae0-b08f-e21ef13c638a",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "get reviews",
+            "url": "http://localhost:4080/api/college/reviews",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2023-07-16T19:37:49.058Z",
+            "modified": "2023-07-16T19:38:25.057Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4cf353af-f6cc-4f34-a938-c96f8412106d",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "new user //signup",
+            "url": "http://localhost:4080/api/newuser",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2023-07-14T12:00:00.123Z",
+            "modified": "2023-07-17T09:50:46.958Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"superjoker\",\n  \"email\":\"superjoker@gmail.com\",\n  \"password\":\"superjoker\",\n  \"avatar\":\"xyz\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7f5d3739-53c3-4164-9897-655e0b6a8210",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "login",
+            "url": "http://localhost:4080/api/login",
+            "method": "POST",
+            "sortNum": 130000,
+            "created": "2023-07-14T13:29:02.519Z",
+            "modified": "2023-07-17T11:13:37.143Z",
+            "headers": [
+                {
+                    "name": "toke",
+                    "value": ""
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"email\":\"superjoker@gmail.com\",\n  \"password\":\"superjoker\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2ff14deb-84e4-4a77-bfd6-b99a868121e2",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "logout",
+            "url": "http://localhost:4080/api/logout",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2023-07-16T06:23:22.384Z",
+            "modified": "2023-07-16T06:24:29.555Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4189c969-5585-4776-b84e-b678afd320cc",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "add review and edit and at same",
+            "url": "http://localhost:4080/api/school/review",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2023-07-16T12:23:36.124Z",
+            "modified": "2023-07-16T21:04:14.107Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjQ1MzNiOGZmMmMwNjE1MjI3NzA0NCIsImlhdCI6MTY4OTU0MTI4MSwiZXhwIjoxNjg5OTczMjgxfQ.b_wzuFFgEVdmwGVKaEWYyS5DmD1B9tBIfGT87McXxNA"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"rating\": 9,\n  \"comment\": \"from super man to super\",\n  \"schools_Id\":\"64b3e6662de261de7f0fd756\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1454c5ad-58f1-4251-b95d-341c8297bcc4",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "get the review",
+            "url": "http://localhost:4080/api/school/reviews",
+            "method": "GET",
+            "sortNum": 160000,
+            "created": "2023-07-16T12:23:59.993Z",
+            "modified": "2023-07-16T15:16:37.028Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjEzZjBlYTViYzc5NTljMDhjYTRhNyIsImlhdCI6MTY4OTUyMDA2OSwiZXhwIjoxNjg5OTUyMDY5fQ.Q7mTds-PDF_p-VzmtnDos4cbed-ipDweFAIuveHpTGw",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "035f3ab0-4fc9-4143-bf27-1977adb390ab",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "college add review",
+            "url": "http://localhost:4080/api/college/review",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2023-07-16T19:32:39.783Z",
+            "modified": "2023-07-16T19:43:54.572Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjEzZjBlYTViYzc5NTljMDhjYTRhNyIsImlhdCI6MTY4OTUyMDA2OSwiZXhwIjoxNjg5OTUyMDY5fQ.Q7mTds-PDF_p-VzmtnDos4cbed-ipDweFAIuveHpTGw"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"rating\": 5,\n  \"comment\": \"Great collage\",\n  \"collegeId\":\"64b4486353505e7b48e86e4d\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1fe3c19e-2c91-44f9-a7f4-7ad5f5890576",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
+            "name": "delete reviews",
+            "url": "http://localhost:4080/api/schools/64b3e6662de261de7f0fd756/reviews/64b4596edf131707ac09b58a",
+            "method": "DELETE",
+            "sortNum": 190000,
+            "created": "2023-07-16T19:50:35.839Z",
+            "modified": "2023-07-16T21:14:21.119Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjQ1MzNiOGZmMmMwNjE1MjI3NzA0NCIsImlhdCI6MTY4OTU0MDIwMiwiZXhwIjoxNjg5OTcyMjAyfQ.dPZhzYya_UDUV7x-JSyj4ShJsV9xZerWlrC5DoXRIHY"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "1a9de11f-5ee0-4a7d-9625-d10f1e4862c0",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "name": "delete the review",
+            "url": "http://localhost:4080/api/college/64b44687714ba67a56589afc/review/64b4469a714ba67a56589b00",
+            "method": "DELETE",
+            "sortNum": 200000,
+            "created": "2023-07-16T20:50:29.658Z",
+            "modified": "2023-07-16T20:53:26.934Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjEzZjBlYTViYzc5NTljMDhjYTRhNyIsImlhdCI6MTY4OTUyMDA2OSwiZXhwIjoxNjg5OTUyMDY5fQ.Q7mTds-PDF_p-VzmtnDos4cbed-ipDweFAIuveHpTGw"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "af7271be-a497-45fe-af10-edb31cd5ff10",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "get user",
+            "url": "http://localhost:4080/api/users/getUserDetails",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2023-07-17T10:57:00.462Z",
+            "modified": "2023-07-17T11:13:46.611Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjUwZWY2ZDBhYmI3MzlkMDAxN2M5YSIsImlhdCI6MTY4OTU5MjQxNywiZXhwIjoxNjkwMDI0NDE3fQ.MgHd-xAaZi9DtclppZgp4KXQw-GdTePz5xJcYSfkyQU"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "df4ce594-19ac-4562-9bc1-18401cd4364a",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "65868b9d-196d-4e04-b257-c47269a81bca",
+            "name": "edit profile",
+            "url": "http://localhost:4080/api/user/edit/",
+            "method": "PUT",
+            "sortNum": 220000,
+            "created": "2023-07-17T11:12:43.485Z",
+            "modified": "2023-07-17T11:19:55.300Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjUwZWY2ZDBhYmI3MzlkMDAxN2M5YSIsImlhdCI6MTY4OTU5MjQxNywiZXhwIjoxNjkwMDI0NDE3fQ.MgHd-xAaZi9DtclppZgp4KXQw-GdTePz5xJcYSfkyQU"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"superjokernew\",\n  \"email\":\"superjoker@gmail.com\",\n  \"avatar\":\"xyz-hero-hgvjvjvkbk\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
