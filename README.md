@@ -1,13 +1,29 @@
-# campusBackend
+# Campus-finder Backend
+
+This repository contains the backend code for Campus Finder, a platform that helps students find and explore various School , colleges and Investors. The backend is built using Node.js , Express.js and Mongodb also utilizes various npm packages for its functionality.
 
 ## Getting Started
 
-To run this project, follow these steps:
+To use this backend, follow the steps below:
+1. Clone the project repository using the following command:`git clone <repository_url>`
+2. Install the required packages:`npm i`
+3. Create a .env file in the root directory of the project. Inside the .env file, add the following **env variables**:`PORT=`,<br>`CONNECTION_STRING=YOUR_DATABASE_CONNECTION_STRING`, <br>`JWT_SECRET=`, <br>`JWT_EXPIRE=`, <br>`COOKIE_EXPIRE=`
+4. After setting up the .env file and installing the dependencies, you can start the server by running:
+**`npm start`**.
 
-1. Clone the repository to your local machine: `git clone <repository_url>`
+The API should now be up and running, ready to serve incoming requests.
 
-2. Install the required Node.js packages:`npm i`
+## To check api
+If you are using the Thunder client to test the API, you can import the **api_collection.json** file provided in this repository. The collection contains sample API requests that you can use to interact with the backend.
 
-4. Start the development server: `npm start`
 
-5. Start with nodemon server: `npm run dev`
+For any issues or inquiries, please don't hesitate to contact.
+
+Happy coding! 🚀
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first
+to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
