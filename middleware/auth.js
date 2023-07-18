@@ -3,10 +3,9 @@ const userSchema = require('../models/usersModel');
 const ErrorHandler = require('../utils/ErrorHandler');
 
 const authMiddleware = async (req, res, next) => {
-  const token = req.cookies.token;  
-  // const token=req.header("token")
-  console.log(token);
-
+  // const {token} = req.cookies;  
+  const token=req.header("token")
+  console.log("token from auth",token);
   if (!token) {
     return next(new ErrorHandler('Please log in to access this resource.', 401));
   }
@@ -27,3 +26,5 @@ const authMiddleware = async (req, res, next) => {
 };
 
 module.exports = authMiddleware;
+
+

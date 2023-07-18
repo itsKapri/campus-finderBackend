@@ -1,10 +1,10 @@
-  const ErrorHandler = require("../utils/ErrorHandler");
-  const userSchema = require("../models/usersModel");
-  const jwt = require('jsonwebtoken');
+const ErrorHandler = require("../utils/ErrorHandler");
+const userSchema = require("../models/usersModel");
+const jwt = require('jsonwebtoken');
 
   //register
   exports.registerUser = async (req, res, next) => {
-    try {
+    try {    
       const { name, email, password,avatar} = req.body;
       const newUser = await userSchema.create({
         name,
@@ -13,11 +13,23 @@
         avatar,
       });
       const token = newUser.getJWTToken();
+      const options = {
+        expires: new Date(
+          Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 60 * 1000
+        ),
+        httpOnly: true,
+      };
+      // res.status(201).cookie("token", token, options).json({
+      //   success: true,
+      //   newUser,
+      //   token,
+      // });
       res.status(201).json({
         success: true,
         newUser,
-        token,
+        token:token,
       });
+
     } catch (error) {
       console.error(error);
       res.status(500).json({
@@ -26,7 +38,7 @@
       });
     }
   };
-
+  
   // Login User
   exports.loginUser = async (req, res, next) => {
     try {
@@ -53,9 +65,15 @@
         httpOnly: true,
       };
 
-      res.status(200).cookie("token", token, options).json({
+      // res.status(200).cookie("token", token, options).json({
+      //   success: true,
+      //   token,
+      //   users
+      // });
+      res.status(201).json({
         success: true,
-        token,
+        users,
+        token:token,
       });
     } catch (error) {
       console.error(error);

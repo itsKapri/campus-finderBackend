@@ -12,6 +12,10 @@ const collegesSchema = mongoose.Schema({
         city: {
             type: String,
             required: [true, "Please enter the city"],
+        },
+        state: {
+            type: String,
+            required: [true, "Please enter the city"],
         }
     },
     website: {
@@ -27,7 +31,7 @@ const collegesSchema = mongoose.Schema({
         required: [true, "Please enter the exams required"],
     },
     ranking: {
-        type: String,
+        type:Number,
         required: [true, "Please enter the college ranking"],
     },
     fees: {
