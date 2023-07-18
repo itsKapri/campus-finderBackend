@@ -1,6 +1,6 @@
 # Campus-finder Backend
 
-This repository contains the backend code for Campus Finder, a platform that helps students find and explore various School , colleges and Investors. The backend is built using Node.js , Express.js and Mongodb also utilizes various npm packages for its functionality.
+This repository contains the backend code for Campus Finder, a platform that helps students find and explore various schools, colleges, and investors. The backend is built using Node.js, Express.js, and MongoDB and utilizes various npm packages for its functionality. The backend provides features like user authentication, review management, profile editing, and CRUD APIs for colleges and schools. Additionally, certain features are restricted to the admin only, such as deleting or inserting colleges and schools, as well as editing existing entries.
 
 ## Getting Started
 
