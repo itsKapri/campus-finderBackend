@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
-    "collectionName": "campus-finder/api",
-    "dateExported": "2023-07-17T11:24:15.315Z",
+    "collectionName": "campus-finder-api",
+    "dateExported": "2023-07-18T21:55:11.374Z",
     "version": "1.1",
     "folders": [
         {
@@ -38,12 +38,12 @@
             "_id": "7b772198-52de-412d-8add-bd8433237374",
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
-            "name": "get all the colleges",
+            "name": "GET-all-COLLEGE",
             "url": "http://localhost:4080/api/colleges",
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-06T08:26:37.514Z",
-            "modified": "2023-07-13T11:05:36.459Z",
+            "modified": "2023-07-18T20:17:45.000Z",
             "headers": [],
             "params": [
                 {
@@ -71,17 +71,17 @@
             "_id": "e88a96a3-e399-4684-ac9d-aa1190adac19",
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
-            "name": "post college",
+            "name": "Create-college  ",
             "url": "http://localhost:4080/api/college/new",
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-07-06T08:31:08.431Z",
-            "modified": "2023-07-16T19:43:31.204Z",
+            "modified": "2023-07-18T21:37:12.576Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"testxyz_1234\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 150000,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": \"https://example.com/college_img_djsce.jpg\"\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  }\n}\n",
+                "raw": "{\n  \"name\": \"New college in area\",\n  \"description\": \"NMIMS is a leading management institute in Mumbai.\",\n  \"location\":{\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.nmims.edu/\",\n  \"Specializations\": [\"Management\", \"Business Administration\"],\n  \"exams\": [\"NMAT\", \"CAT\"],\n  \"ranking\": 15,\n  \"fees\": {\n    \"BE\": 700000,\n    \"MBA\": 180000\n  },\n  \"package\": 1800000,\n  \"images\": {\n    \"college_img\": [\"https://images.unsplash.com/photo-1553505602-764c045c3dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80\", \"https://images.unsplash.com/photo-1553505602-764c045c3dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80\"],\n    \"logo_img\": \"https://images.collegedunia.com/public/college_data/images/logos/1506323004Logo.jpg?h=80&w=80&mode=stretch\"\n  },\n  \"Owenrship\": \"private\",\n  \"Address\": \"Vile Parle, Mumbai, Maharashtra, India\",\n  \"Phone\": 9123456789,\n  \"email\": \"info@nmims.edu\"\n}\n",
                 "form": []
             },
             "tests": []
@@ -91,16 +91,16 @@
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
             "name": "update college",
-            "url": "http://localhost:4080/api/college/64a6adb3ba147067139835f5",
+            "url": "http://localhost:4080/api/college/64b6d9c35dc29691a97b6756",
             "method": "PUT",
             "sortNum": 30000,
             "created": "2023-07-06T08:31:54.773Z",
-            "modified": "2023-07-08T05:31:57.729Z",
+            "modified": "2023-07-18T19:03:13.574Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering\",\n  \"description\": \"SVKM's Dwarkadas J. Sanghvi College of Engineering is a private engineering college located in Mumbai, Maharashtra, India. It is affiliated with the University of Mumbai.\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.djsce.ac.in/\",\n  \"courses\": [\n    \"Computer Engineering\",\n    \"Electronics and Telecommunication Engineering\",\n    \"Mechanical Engineering\",\n    \"Information Technology\",\n    \"Civil Engineering\"\n  ],\n  \"exams\": [\n    \"MHT CET\",\n    \"JEE Main\"\n  ],\n  \"ranking\": \"Ranked among the top engineering colleges in Mumbai\",\n  \"fees\": 100,\n  \"placement_package\": 500000,\n  \"images\": {\n    \"college_img\": {\n      \"public_id\": \"xyz789\",\n      \"url\": [\"https://example.com/college_img_djsce.jpg\",\"https://example.com/college_img_djsce.jpg\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"pqr012\",\n      \"url\": \"https://example.com/logo_img_djsce.jpg\"\n    }\n  },\n  \"rating\": 0,\n  \"number_of_reviews\":0\n}\n",
+                "raw": "{\n  \"name\": \"super human college\",\n  \"description\": \"NMIMS is a leading management institute in Mumbai.\",\n  \"location\":{\n    \"city\": \"pune\",\n    \"state\": \"Maharashtra\"\n  },\n  \"website\": \"https://www.nmims.edu/\",\n  \"Specializations\": [\"Management\", \"Business Administration\"],\n  \"exams\": [\"NMAT\", \"CAT\"],\n  \"ranking\": 15,\n  \"fees\": {\n    \"BE\": 200000,\n    \"MBA\": 180000\n  },\n  \"package\": 1800000,\n  \"images\": {\n    \"college_img\": [\"https://images.unsplash.com/photo-1553505602-764c045c3dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80\", \"https://images.unsplash.com/photo-1553505602-764c045c3dba?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80\"],\n    \"logo_img\": \"https://images.collegedunia.com/public/college_data/images/logos/1506323004Logo.jpg?h=80&w=80&mode=stretch\"\n  },\n  \"Owenrship\": \"private\",\n  \"Address\": \"Vile Parle, Mumbai, Maharashtra, India\",\n  \"Phone\": 9123456789,\n  \"email\": \"info@nmims.edu\"\n}\n",
                 "form": []
             },
             "tests": []
@@ -124,11 +124,11 @@
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
             "name": "delete college",
-            "url": "http://localhost:4080/api/college/64a6a6a86eace1f306f92003",
+            "url": "http://localhost:4080/api/college/64b6d9c35dc29691a97b6756",
             "method": "DELETE",
             "sortNum": 40000,
             "created": "2023-07-06T08:32:09.506Z",
-            "modified": "2023-07-06T12:03:53.173Z",
+            "modified": "2023-07-18T20:17:37.055Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -156,12 +156,12 @@
             "method": "POST",
             "sortNum": 60000,
             "created": "2023-07-07T06:28:13.827Z",
-            "modified": "2023-07-16T12:45:26.488Z",
+            "modified": "2023-07-18T07:34:22.936Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\": \"xyz\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"sub_city\": \"Nalasopara East\",\n    \"pincode\": 123456,\n    \"state\": \"Maharashtra\"\n  },\n  \"images\": {\n    \"school_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": [\"image_url_1\", \"image_url_2\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": \"logo_image_url\"\n    }\n  },\n  \"type_Of_board\": [\"example_board_type_1\", \"example_board_type_2\"],\n  \"description\": \"Example description of the school\",\n  \"documents_required_for_admission\": \"Example documents required for admission\",\n  \"contact_information\": {\n    \"school_email\": \"school@example.com\",\n    \"school_contact\": [1234567890, 9876543210]\n  },\n  \"fees\": 10000,\n  \"admission_coordinator_information\": {\n    \"coordinator_email\": \"coordinator@example.com\",\n    \"coordinator_contact\": [1111111111, 2222222222]\n  },\n  \"type_Of_school\": [\"private\"]\n}\n",
+                "raw": "{\n  \"name\": \"xyz1565\",\n  \"location\": {\n    \"city\": \"Mumbai\",\n    \"sub_city\": \"Nalasopara East\",\n    \"pincode\": 123456,\n    \"state\": \"Maharashtra\"\n  },\n  \"images\": {\n    \"school_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": [\"image_url_1\", \"image_url_2\"]\n    },\n    \"logo_img\": {\n      \"public_id\": \"example_public_id\",\n      \"url\": \"logo_image_url\"\n    }\n  },\n  \"type_Of_board\": [\"example_board_type_1\", \"example_board_type_2\"],\n  \"description\": \"Example description of the school\",\n  \"documents_required_for_admission\": \"Example documents required for admission\",\n  \"contact_information\": {\n    \"school_email\": \"school@example.com\",\n    \"school_contact\": [1234567890, 9876543210]\n  },\n  \"fees\": 10000,\n  \"admission_coordinator_information\": {\n    \"coordinator_email\": \"coordinator@example.com\",\n    \"coordinator_contact\": [1111111111, 2222222222]\n  },\n  \"type_Of_school\": [\"private\"]\n}\n",
                 "form": []
             },
             "tests": []
@@ -189,7 +189,7 @@
             "_id": "21032a1f-be34-4c20-8cc1-c8d4111f4d1d",
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "fe0ec3a8-8c4b-447c-a450-1ee672689dd1",
-            "name": "delete schoolList (admin)",
+            "name": "delete schoolList ",
             "url": "http://localhost:4080/api/school/64a810abb99e1da6ad75ad82",
             "method": "DELETE",
             "sortNum": 80000,
@@ -236,8 +236,14 @@
             "method": "GET",
             "sortNum": 110000,
             "created": "2023-07-16T19:37:49.058Z",
-            "modified": "2023-07-16T19:38:25.057Z",
-            "headers": [],
+            "modified": "2023-07-18T19:26:15.997Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "",
+                    "isDisabled": true
+                }
+            ],
             "params": [],
             "tests": []
         },
@@ -250,12 +256,12 @@
             "method": "POST",
             "sortNum": 120000,
             "created": "2023-07-14T12:00:00.123Z",
-            "modified": "2023-07-17T09:50:46.958Z",
+            "modified": "2023-07-18T21:51:37.509Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"superjoker\",\n  \"email\":\"superjoker@gmail.com\",\n  \"password\":\"superjoker\",\n  \"avatar\":\"xyz\"\n}",
+                "raw": "{\n  \"name\":\"supehero\",\n  \"email\":\"superhero@gmail.com\",\n  \"password\":\"superhero\"\n}",
                 "form": []
             },
             "tests": []
@@ -269,7 +275,7 @@
             "method": "POST",
             "sortNum": 130000,
             "created": "2023-07-14T13:29:02.519Z",
-            "modified": "2023-07-17T11:13:37.143Z",
+            "modified": "2023-07-18T21:51:55.997Z",
             "headers": [
                 {
                     "name": "toke",
@@ -279,7 +285,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n   \"email\":\"superjoker@gmail.com\",\n  \"password\":\"superjoker\"\n}",
+                "raw": "{\n  \"email\": \"superhero@gmail.com\",\n  \"password\": \"superhero\"\n}",
                 "form": []
             },
             "tests": []
@@ -307,17 +313,17 @@
             "method": "PUT",
             "sortNum": 150000,
             "created": "2023-07-16T12:23:36.124Z",
-            "modified": "2023-07-16T21:04:14.107Z",
+            "modified": "2023-07-18T21:54:19.136Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjQ1MzNiOGZmMmMwNjE1MjI3NzA0NCIsImlhdCI6MTY4OTU0MTI4MSwiZXhwIjoxNjg5OTczMjgxfQ.b_wzuFFgEVdmwGVKaEWYyS5DmD1B9tBIfGT87McXxNA"
+                    "value": ""
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"rating\": 9,\n  \"comment\": \"from super man to super\",\n  \"schools_Id\":\"64b3e6662de261de7f0fd756\"\n}\n",
+                "raw": "{\n  \"rating\": 5,\n  \"comment\": \"from super man to super\",\n  \"schools_Id\":\"64b6407e14c8a57bd922c3ae\"\n}\n",
                 "form": []
             },
             "tests": []
@@ -346,22 +352,22 @@
             "_id": "035f3ab0-4fc9-4143-bf27-1977adb390ab",
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
-            "name": "college add review",
+            "name": "add and update review",
             "url": "http://localhost:4080/api/college/review",
             "method": "PUT",
             "sortNum": 170000,
             "created": "2023-07-16T19:32:39.783Z",
-            "modified": "2023-07-16T19:43:54.572Z",
+            "modified": "2023-07-18T21:53:48.415Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjEzZjBlYTViYzc5NTljMDhjYTRhNyIsImlhdCI6MTY4OTUyMDA2OSwiZXhwIjoxNjg5OTUyMDY5fQ.Q7mTds-PDF_p-VzmtnDos4cbed-ipDweFAIuveHpTGw"
+                    "value": ""
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"rating\": 5,\n  \"comment\": \"Great collage\",\n  \"collegeId\":\"64b4486353505e7b48e86e4d\"\n}\n",
+                "raw": "{\n  \"rating\": 4,\n  \"comment\": \"Great collage\",\n  \"collegeId\":\"64b557dc1c20a5b064ce043a\"\n}\n",
                 "form": []
             },
             "tests": []
@@ -413,11 +419,11 @@
             "method": "GET",
             "sortNum": 210000,
             "created": "2023-07-17T10:57:00.462Z",
-            "modified": "2023-07-17T11:13:46.611Z",
+            "modified": "2023-07-18T21:52:22.646Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjUwZWY2ZDBhYmI3MzlkMDAxN2M5YSIsImlhdCI6MTY4OTU5MjQxNywiZXhwIjoxNjkwMDI0NDE3fQ.MgHd-xAaZi9DtclppZgp4KXQw-GdTePz5xJcYSfkyQU"
+                    "value": ""
                 }
             ],
             "params": [],
@@ -432,17 +438,17 @@
             "method": "PUT",
             "sortNum": 220000,
             "created": "2023-07-17T11:12:43.485Z",
-            "modified": "2023-07-17T11:19:55.300Z",
+            "modified": "2023-07-18T21:52:34.099Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjUwZWY2ZDBhYmI3MzlkMDAxN2M5YSIsImlhdCI6MTY4OTU5MjQxNywiZXhwIjoxNjkwMDI0NDE3fQ.MgHd-xAaZi9DtclppZgp4KXQw-GdTePz5xJcYSfkyQU"
+                    "value": ""
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"superjokernew\",\n  \"email\":\"superjoker@gmail.com\",\n  \"avatar\":\"xyz-hero-hgvjvjvkbk\"\n}",
+                "raw": "{\n  \"name\": \"\",\n    \"email\": \"\",\n    \"avatar\": \"\"\n}",
                 "form": []
             },
             "tests": []

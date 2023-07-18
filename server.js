@@ -15,5 +15,8 @@ app.listen(process.env.PORT,()=>{
 
 // env
 // PORT=4080
-// CONNECTION_STRING="mongodb+srv://19301033nilesh:admin@cluster0.aswekuy.mongodb.net/"
+// CONNECTION_STRING=""
+// JWT_SECRET=MysecretkeyNK
+// JWT_EXPIRE=5d
+// COOKIE_EXPIRE=5
 

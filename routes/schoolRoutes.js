@@ -1,7 +1,6 @@
 const express = require('express');
-
-const { getAllSchools, createSchoolList, updateSchoolList, deleteSchoolList, getSchoolById, createSchoolReview ,getschoolReviews,deleteSchoolReview} = require('../controllers/schoolsController')
 const router = express.Router();
+const { getAllSchools, createSchoolList, updateSchoolList, deleteSchoolList, getSchoolById, createSchoolReview ,getschoolReviews,deleteSchoolReview} = require('../controllers/schoolsController')
 const authMiddleware = require('../middleware/auth');
 
 router.route("/school").get(getAllSchools)
