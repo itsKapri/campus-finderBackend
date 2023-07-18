@@ -1,4 +1,4 @@
-# directoryBackend
+# campusBackend
 
 ## Getting Started
 
