@@ -4,7 +4,6 @@ exports.getAllData = async (req, res) => {
     try {
         const schoolList = await schoolsSchema.find();
         const collegeList = await collegesSchema.find();
-
         console.log("school",schoolList.length);
         console.log("college",collegeList.length);
         res.status(200).json({
