@@ -23,22 +23,10 @@ const schoolsSchema = mongoose.Schema({
     },
     images: {
         school_img: {
-            public_id: {
-                type: String,
-                required: true,
-            },
-            url: {
-                type: [String],
-            },
+            type: [String],
         },
         logo_img: {
-            public_id: {
-                type: String,
-                required: true,
-            },
-            url: {
-                type: String,
-            },
+            type: String
         },
     },
     type_Of_board: {
@@ -51,7 +39,7 @@ const schoolsSchema = mongoose.Schema({
         required: [true, "Please enter the description"],
     },
     documents_required_for_admission: {
-        type: String,
+        type: [String],
         required: [true, "Please enter the documents Required for admission"],
     },
     contact_information: {
@@ -66,14 +54,6 @@ const schoolsSchema = mongoose.Schema({
         type: Number,
         required: [true, "Please enter the fees"],
     },
-    admission_coordinator_information: {
-        coordinator_email: {
-            type: String,
-        },
-        coordinator_contact: {
-            type: [Number],
-        }
-    },
     type_Of_school: {
         type: [String],
         enum: ["public", "private", "hybrid"],
@@ -82,32 +62,28 @@ const schoolsSchema = mongoose.Schema({
         type: Number,
         default: 0,
     },
-    number_of_reviews: {
-        type: Number,       
-        default: 0,
-    },
     reviews: [
         {
-          user: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User",
-            required: true,
-          },
-          name: {
-            type: String,
-            required: true,
-          },
-          rating: {
-            type: Number,
-            required: true,
-            
-          },
-          comment: {
-            type: String,
-            required: true,
-          },
+            user: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: "User",
+                required: true,
+            },
+            name: {
+                type: String,
+                required: true,
+            },
+            rating: {
+                type: Number,
+                required: true,
+
+            },
+            comment: {
+                type: String,
+                required: true,
+            },
         },
-      ],
+    ],
     createdAT: {
         type: Date,
         default: Date.now

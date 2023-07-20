@@ -24,6 +24,10 @@ app.use("/api/", allData);
 const users = require('./routes/userRoutes');
 app.use("/api", users);
 
+// save college
+const savecollege=require('./routes/saveRoutes')
+app.use("/api/collegecart/",savecollege)
+
 // Auth Middleware 
 app.use(authMiddleware);
 

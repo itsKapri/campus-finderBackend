@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
-    "collectionName": "campus-finder-api",
-    "dateExported": "2023-07-18T21:55:11.374Z",
+    "collectionName": "campus-finder/api",
+    "dateExported": "2023-07-20T18:53:56.683Z",
     "version": "1.1",
     "folders": [
         {
@@ -31,6 +31,13 @@
             "containerId": "",
             "created": "2023-07-07T13:50:47.264Z",
             "sortNum": 40000
+        },
+        {
+            "_id": "63d16e8e-2247-41b2-bfdc-bffdabc5e62b",
+            "name": "college cart",
+            "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
+            "created": "2023-07-20T18:28:22.577Z",
+            "sortNum": 50000
         }
     ],
     "requests": [
@@ -43,7 +50,7 @@
             "method": "GET",
             "sortNum": 10000,
             "created": "2023-07-06T08:26:37.514Z",
-            "modified": "2023-07-18T20:17:45.000Z",
+            "modified": "2023-07-20T18:44:45.225Z",
             "headers": [],
             "params": [
                 {
@@ -138,11 +145,11 @@
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
             "name": "get college by id",
-            "url": "http://localhost:4080/api/college/64b44687714ba67a56589afc",
+            "url": "http://localhost:4080/api/college/64b551d6c52496f8e49ebb50",
             "method": "GET",
             "sortNum": 50000,
             "created": "2023-07-06T08:32:22.918Z",
-            "modified": "2023-07-16T19:43:14.047Z",
+            "modified": "2023-07-20T15:00:28.499Z",
             "headers": [],
             "params": [],
             "tests": []
@@ -256,12 +263,12 @@
             "method": "POST",
             "sortNum": 120000,
             "created": "2023-07-14T12:00:00.123Z",
-            "modified": "2023-07-18T21:51:37.509Z",
+            "modified": "2023-07-20T18:32:40.887Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"supehero\",\n  \"email\":\"superhero@gmail.com\",\n  \"password\":\"superhero\"\n}",
+                "raw": "{\n  \"name\":\"xxhero\",\n  \"email\":\"xxhero@gmail.com\",\n  \"password\":\"superhero\"\n}",
                 "form": []
             },
             "tests": []
@@ -275,7 +282,7 @@
             "method": "POST",
             "sortNum": 130000,
             "created": "2023-07-14T13:29:02.519Z",
-            "modified": "2023-07-18T21:51:55.997Z",
+            "modified": "2023-07-19T03:06:28.297Z",
             "headers": [
                 {
                     "name": "toke",
@@ -285,7 +292,7 @@
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"superhero@gmail.com\",\n  \"password\": \"superhero\"\n}",
+                "raw": "{\n  \"email\":\"superhero@gmail.com\",\n  \"password\":\"superhero\"\n}",
                 "form": []
             },
             "tests": []
@@ -357,17 +364,17 @@
             "method": "PUT",
             "sortNum": 170000,
             "created": "2023-07-16T19:32:39.783Z",
-            "modified": "2023-07-18T21:53:48.415Z",
+            "modified": "2023-07-19T03:08:29.027Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": ""
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjc1MzI1NWE1ZmYyNTFiNGNlZDJjNCIsImlhdCI6MTY4OTczNjA5MCwiZXhwIjoxNjkwMTY4MDkwfQ.rnCj1T0SzlYR5b6Ygv3lA6sL2UHuU2o1iziTtWMnmXA"
                 }
             ],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"rating\": 4,\n  \"comment\": \"Great collage\",\n  \"collegeId\":\"64b557dc1c20a5b064ce043a\"\n}\n",
+                "raw": "{\n  \"rating\": 2.5,\n  \"comment\": \"Great collage\",\n  \"collegeId\":\"64b557dc1c20a5b064ce043a\"\n}\n",
                 "form": []
             },
             "tests": []
@@ -396,15 +403,15 @@
             "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
             "containerId": "cb703e65-8930-4284-88ea-8ec0aa95407a",
             "name": "delete the review",
-            "url": "http://localhost:4080/api/college/64b44687714ba67a56589afc/review/64b4469a714ba67a56589b00",
+            "url": "http://localhost:4080/api/college/64b557dc1c20a5b064ce043a/review/64b753ac5a5ff251b4ced2d0",
             "method": "DELETE",
             "sortNum": 200000,
             "created": "2023-07-16T20:50:29.658Z",
-            "modified": "2023-07-16T20:53:26.934Z",
+            "modified": "2023-07-19T03:10:11.463Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YjEzZjBlYTViYzc5NTljMDhjYTRhNyIsImlhdCI6MTY4OTUyMDA2OSwiZXhwIjoxNjg5OTUyMDY5fQ.Q7mTds-PDF_p-VzmtnDos4cbed-ipDweFAIuveHpTGw"
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjc1MzI1NWE1ZmYyNTFiNGNlZDJjNCIsImlhdCI6MTY4OTczNjA5MCwiZXhwIjoxNjkwMTY4MDkwfQ.rnCj1T0SzlYR5b6Ygv3lA6sL2UHuU2o1iziTtWMnmXA"
                 }
             ],
             "params": [],
@@ -419,11 +426,11 @@
             "method": "GET",
             "sortNum": 210000,
             "created": "2023-07-17T10:57:00.462Z",
-            "modified": "2023-07-18T21:52:22.646Z",
+            "modified": "2023-07-19T03:07:25.605Z",
             "headers": [
                 {
                     "name": "token",
-                    "value": ""
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjc1MzI1NWE1ZmYyNTFiNGNlZDJjNCIsImlhdCI6MTY4OTczNTk4OCwiZXhwIjoxNjkwMTY3OTg4fQ.wsrwYEW6s__DSMxo0TCXrS3xZMvN6RJDLVKXlM0dFNI"
                 }
             ],
             "params": [],
@@ -451,6 +458,63 @@
                 "raw": "{\n  \"name\": \"\",\n    \"email\": \"\",\n    \"avatar\": \"\"\n}",
                 "form": []
             },
+            "tests": []
+        },
+        {
+            "_id": "1ba145cd-92ff-4867-9de2-2c58fee56943",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "63d16e8e-2247-41b2-bfdc-bffdabc5e62b",
+            "name": "get save college",
+            "url": "http://localhost:4080/api/collegecart",
+            "method": "GET",
+            "sortNum": 270000,
+            "created": "2023-07-20T18:28:38.761Z",
+            "modified": "2023-07-20T18:50:46.798Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjc1MzI1NWE1ZmYyNTFiNGNlZDJjNCIsImlhdCI6MTY4OTg3ODEwMywiZXhwIjoxNjkwMzEwMTAzfQ.mTYBULsf27NioDIlsb93KNGLfbJZIV3HA4W4x65i4Vk"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "caa8e68f-c373-4b20-8f07-d914a2f70822",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "63d16e8e-2247-41b2-bfdc-bffdabc5e62b",
+            "name": "add to cart",
+            "url": "http://localhost:4080/api/cart/64b551d6c52496f8e49ebb50",
+            "method": "POST",
+            "sortNum": 290000,
+            "created": "2023-07-20T18:29:46.904Z",
+            "modified": "2023-07-20T18:42:28.573Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjk3ZGM4MWY3Zjk2Yjg3MTcyOGY2MSIsImlhdCI6MTY4OTg3Nzk2MCwiZXhwIjoxNjkwMzA5OTYwfQ.lCWcdOK-p1lZ736gZUim9iv4EOl_7tW6U14ltBeS4P4"
+                }
+            ],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "5ddd8222-635c-4fea-8d88-c4f4033b8e76",
+            "colId": "742f1ad4-bdb0-4218-96c2-bea3225e77ba",
+            "containerId": "63d16e8e-2247-41b2-bfdc-bffdabc5e62b",
+            "name": "delete from cart",
+            "url": "http://localhost:4080/api/cart/64b97f751f7f96b871728f9c",
+            "method": "DELETE",
+            "sortNum": 300000,
+            "created": "2023-07-20T18:29:58.423Z",
+            "modified": "2023-07-20T18:42:19.900Z",
+            "headers": [
+                {
+                    "name": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0Yjk3ZGM4MWY3Zjk2Yjg3MTcyOGY2MSIsImlhdCI6MTY4OTg3Nzk2MCwiZXhwIjoxNjkwMzA5OTYwfQ.lCWcdOK-p1lZ736gZUim9iv4EOl_7tW6U14ltBeS4P4"
+                }
+            ],
+            "params": [],
             "tests": []
         }
     ]
