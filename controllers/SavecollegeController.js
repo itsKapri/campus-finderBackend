@@ -11,7 +11,7 @@ exports.savecollege = async (req, res) => {
     if (isCollegeSaved) {
       return res.status(200).json({
         success: true,
-        message: 'The college is already in your save list.',
+        message: 'already there ',
       });
     }
     // If college is not saved, proceed to save it
@@ -23,6 +23,7 @@ exports.savecollege = async (req, res) => {
 
     res.status(201).json({
       success: true,
+      message: 'added',
       saveCollege,
     });
   } catch (error) {
