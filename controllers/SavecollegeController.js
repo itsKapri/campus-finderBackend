@@ -4,19 +4,27 @@ const collegesSchema = require('../models/collegesModels');
 
 exports.savecollege = async (req, res) => {
   try {
-    const id=req.params.id
+    const id = req.params.id;
     const college = await collegesSchema.findById(id);
-    console.log("college",college.stringfy);
+    // Check if the college is already saved by the user
+    const isCollegeSaved = await saveCollegeSchema.exists({ college: id, user: req.user.id });
+    if (isCollegeSaved) {
+      return res.status(200).json({
+        success: true,
+        message: 'The college is already in your save list.',
+      });
+    }
+    // If college is not saved, proceed to save it
     const saveCollege = await saveCollegeSchema.create({
       college: college,
       user: req.user.id,
-      username:req.user.name
+      username: req.user.name,
     });
-    console.log("savecollge ",JSON.stringify(college))
+
     res.status(201).json({
       success: true,
       saveCollege,
-    })
+    });
   } catch (error) {
     console.error(error);
     res.status(500).json({
@@ -25,6 +33,7 @@ exports.savecollege = async (req, res) => {
     });
   }
 };
+
 exports.fetchCollege = async (req, res) => {
   const userId = req.user.id;
   try {
