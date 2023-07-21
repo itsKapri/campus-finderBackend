@@ -1,6 +1,8 @@
 const schoolsSchema = require('../models/schoolModels');
 const ErrorHandler = require('../utils/ErrorHandler');
 const mongoose =require("mongoose")
+
+
 exports.getAllSchools = async (req, res, next) => {
   try {
     const schoolList = await schoolsSchema.find();

@@ -28,6 +28,10 @@ app.use("/api", users);
 const savecollege=require('./routes/saveRoutes')
 app.use("/api/collegecart/",savecollege)
 
+//school save
+const saveSchool=require('./routes/schoolSaveRoutes')
+app.use("/api/schoolcart/",saveSchool)
+
 // Auth Middleware 
 app.use(authMiddleware);
 

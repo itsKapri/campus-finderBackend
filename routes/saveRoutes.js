@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { savecollege ,fetchCollege,deletesavecollege} = require('../controllers/SavecollegeController'); 
+const { savecollege ,fetchCollege,deletesavecollege} = require('../controllers/saveCollegeController'); 
 const authMiddleware = require('../middleware/auth');
 
 router.route('/').get(authMiddleware,fetchCollege);

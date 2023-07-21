@@ -6,24 +6,21 @@ exports.savecollege = async (req, res) => {
   try {
     const id = req.params.id;
     const college = await collegesSchema.findById(id);
-    // Check if the college is already saved by the user
     const isCollegeSaved = await saveCollegeSchema.exists({ college: id, user: req.user.id });
     if (isCollegeSaved) {
       return res.status(200).json({
         success: true,
-        message: 'already there ',
+        message: 'Already saved',
       });
     }
-    // If college is not saved, proceed to save it
     const saveCollege = await saveCollegeSchema.create({
       college: college,
       user: req.user.id,
       username: req.user.name,
     });
-
     res.status(201).json({
       success: true,
-      message: 'added',
+      message: 'College successfully saved',
       saveCollege,
     });
   } catch (error) {
@@ -40,7 +37,7 @@ exports.fetchCollege = async (req, res) => {
   try {
     const savedColleges = await saveCollegeSchema
       .find({ user: userId })
-      .populate('college'); 
+      .populate('college');
     res.status(200).json({
       success: true,
       savedColleges,
