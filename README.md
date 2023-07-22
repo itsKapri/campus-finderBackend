@@ -13,6 +13,20 @@ To use this backend, follow the steps below:
 
 The API should now be up and running, ready to serve incoming requests.
 
+## Key Features:
+* **User Authentication**: Implementing a secure user authentication system to enable users to create accounts, log in, and access personalized features.
+
+* **Profile Editing**: Allowing users to modify their profile information, making it easier to keep their details up to date.
+
+* **Personalized Wishlist**: Enabling users to create a personalized wishlist by adding their favorite colleges and schools, allowing for easy access and organization of preferred choices.
+
+* **Review Management**: Facilitating users to post, view, and manage reviews for different schools and colleges, contributing to an informed decision-making process.
+
+* **Powerful CRUD APIs**: Providing Create, Read, Update, and Delete APIs to manage colleges and schools, ensuring efficient data management.
+
+* **Admin Privileges**: Limiting certain functionalities, such as adding, deleting, or editing entries, to the admin role to maintain data integrity.
+Search Feature: Allowing users to search through different colleges and schools based on various criteria, such as location, programs offered, and other relevant information. This feature enhances the platform's usability and helps users find the institutions that best suit their needs.
+
 ## To check api
 If you are using the Thunder client to test the API, you can import the **api_collection.json** file provided in this repository. The collection contains sample API requests that you can use to interact with the backend.
 
